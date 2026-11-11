@@ -11,6 +11,7 @@ on:
     paths:
       - "backend/**"
       - ".github/workflows/backend.yml"
+      - "!backend/**/README.md"
 
 concurrency:
   group: backend-${{ github.workflow }}-${{ github.ref }}
