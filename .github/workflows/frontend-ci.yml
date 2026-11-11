@@ -4,11 +4,13 @@ on:
   push:
     paths:
       - "frontend/**"
+      - "!frontend/**/README.md"
       - ".github/workflows/frontend-ci.yml"
 
   pull_request:
     paths:
       - "frontend/**"
+      - "!frontend/**/README.md"
       - ".github/workflows/frontend-ci.yml"
 
 concurrency:
