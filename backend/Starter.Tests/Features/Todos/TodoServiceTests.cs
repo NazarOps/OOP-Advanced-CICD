@@ -19,7 +19,7 @@ public sealed class TodoServiceTests
         var result = await _service.CreateAsync(new CreateTodoRequest("  Buy milk  "), CancellationToken.None);
 
         Assert.True(result.Success);
-        Assert.Equal("  Buy milk    ", result.Data!.Title);
+        Assert.Equal("Buy milk", result.Data!.Title);
         Assert.Single(_repository.Saved);
     }
 
