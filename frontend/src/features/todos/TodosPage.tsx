@@ -11,11 +11,14 @@ export function TodosPage() {
   const [state, setState] = useState<LoadState>({ status: 'loading' })
   const [title, setTitle] = useState('')
 
-  useEffect(() => {
-    fetchTodos()
-      .then((todos) => setState({ status: 'ready', todos }))
-      .catch(() => setState({ status: 'error', message: 'Kunde inte hämta uppgifterna. Körs API:t?' }))
-  }, [])
+    useEffect(() => {
+      fetchTodos()
+        .then((todos) => setState({ status: 'ready', todos }))
+        .catch(() => setState({ status: 'error', message: 'Kunde inte hämta uppgifterna. Körs API:t?' }))
+    }, [])
+
+  //added comment/
+  //comment
 
   async function handleSubmit(event: FormEvent) {
     event.preventDefault()
