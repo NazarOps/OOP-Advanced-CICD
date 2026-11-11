@@ -17,6 +17,9 @@ export function TodosPage() {
       .catch(() => setState({ status: 'error', message: 'Kunde inte hämta uppgifterna. Körs API:t?' }))
   }, [])
 
+  //added comment/
+  //comment
+
   async function handleSubmit(event: FormEvent) {
     event.preventDefault()
     if (title.trim() === '' || state.status !== 'ready') {
